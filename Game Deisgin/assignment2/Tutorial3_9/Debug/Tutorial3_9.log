@@ -1,0 +1,9 @@
+﻿  Tutorial3.cpp
+d:\classenv10\projects\tutorials\tutorial3_9\tutorial3.cpp(18): warning C4305: 'argument': truncation from 'double' to 'Ogre::Real'
+d:\classenv10\projects\tutorials\tutorial3_9\tutorial3.cpp(92): warning C4305: 'argument': truncation from 'double' to 'Ogre::Real'
+d:\classenv10\projects\tutorials\tutorial3_9\tutorial3.cpp(93): warning C4305: 'argument': truncation from 'double' to 'Ogre::Real'
+d:\classenv10\projects\tutorials\tutorial3_9\tutorial3.cpp(110): warning C4305: 'argument': truncation from 'double' to 'float'
+d:\classenv10\projects\tutorials\tutorial3_9\tutorial3.cpp(114): warning C4305: 'argument': truncation from 'double' to 'const Ogre::Real'
+d:\classenv10\projects\tutorials\tutorial3_9\tutorial3.cpp(121): warning C4305: 'argument': truncation from 'double' to 'float'
+  Tutorial3_9.vcxproj -> D:\classENV10\Build9\bin\debug\Tutorial3_9.exe
+  Tutorial3_9.vcxproj -> D:\classENV10\Build9\bin\debug\Tutorial3_9.pdb (Full PDB)
