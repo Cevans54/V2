@@ -1,0 +1,498 @@
+
+/******************************************************************** Basic layout Styles ********************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 100;
+  background: url("./images/light-gray-background.jpg") no-repeat center center fixed;
+  -webkit-backdrop-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+}
+
+.centerAlign {
+  text-align: center;
+  background: grey;
+  border: grey;
+  border-radius: 5px;
+  width: 50%;
+}
+
+/******************************************************************** Main Heading Style ********************************************************************/
+.header {
+  display: block;
+  background-image: url("./images/logoBackground.jpg");
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 1;
+}
+
+.header img {
+  width: 250px;
+  height: auto;
+  border: 50px;
+  margin: 5px;
+}
+
+
+/******************************************************************** Style the top navigation bar ********************************************************************/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  border: 1px solid black;
+  z-index: 2;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: verdana;
+  padding: 8px 4px;
+  text-decoration: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: none;
+}
+.topnav a:active {
+  background-color: rgb(54, 54, 54);
+  color: black;
+  text-decoration: none;
+}
+
+/******************************************************************** Seperating screen into 3 sections ********************************************************************/
+.column {
+  float: Left;
+  padding: 10px;
+  position: relative;
+  top: 150px;
+  font-family: verdana;
+  margin-bottom: 200px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.column.side{
+  width: 20%;
+  border: 2px;
+  border-radius: 2px;
+  border-color: grey;
+  
+}
+.column.middle{
+  width: 60%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  margin-top: 90px;
+  float: left;
+  width: 20%;
+  overflow-y: auto;
+  height: 750px;
+}
+
+/* Right column */
+.rightcolumn {
+  margin-top: 90px;
+  float: left;
+  width: 60%;
+  padding-left: 20px;
+  overflow-y: auto;
+  height: 750px;
+}
+
+/* Add a card effect for articles */
+.card {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.chatRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/******************************************************************** Home Page Style ********************************************************************/
+.homeLogo {
+  align-items: center;
+}
+
+.homeLogo img {
+  width: 100%;
+  height: auto;
+}
+
+.list-style {
+  color: rgb(61, 62, 77);
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  line-height: 60px;
+  font-size: 25px;
+}
+
+.list-style li {
+  list-style-type: none;
+  text-align: left;
+}
+.list-style img {
+  width: 30px;
+  height: auto;
+  margin: 5px;
+  
+}
+
+.box {
+  margin-top: 5px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+  width: 80%;
+
+}
+
+
+/******************************************************************** Calendar Page Style ********************************************************************/
+.pageBody{
+  top:60px;
+	position:relative;
+}
+
+/******************************************************************** Chat Page Style********************************************************************/
+.pageBody{
+  top: 60px;
+  position: relative;
+  overflow: scroll;
+}
+
+.chatapp{
+  overflow: scroll;
+  display: grid; /* this creates a grid for each component of the chat app to be placed, pretty cool */
+  height: 100%;
+  width: 100%;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas:
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "r m m m m m"
+      "s f f f f f";
+}
+
+.message-list{
+  grid-area: m; /* each one of the components is designated an area on the grid */
+  background-color: white; /* coloring to help see the component */
+  border: 2px solid #333;
+  border-radius: 50px;
+  padding: 20px;
+  overflow: scroll;
+}
+
+.new-room{
+  grid-area: s;
+  background-color: rgb(0, 69, 138); /* coloring to help see the component */
+  border: 2px solid #333;
+  border-radius: 25px;
+  text-align: center;
+  color: rgb(93, 184, 91);
+}
+
+.send-message{
+  grid-area:f;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 50px;
+  width: 100%;
+  padding: 20px;
+}
+
+.room-list{
+  grid-area:r;
+  color: black;
+  background-color: rgb(93, 184, 91); /* coloring to help see the component */
+  border: 2px solid rgb(65, 156, 63);
+  border-radius: 25px;
+  text-align: left;
+  padding: 10px;
+}
+.room{
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  width: 100%;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.room:active{
+  background-color: rgb(70, 115, 129);
+  border: 2px solid rgb(70, 115, 129);
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.room:hover {
+  background-color: rgb(127, 181, 199);
+  border: 0px solid rgb(127, 181, 199);
+  border-radius: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.roomactive {
+  color: white;
+  background-color: rgb(127, 181, 199);
+  border: 2px solid rgb(127, 181, 199);
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.spacing {
+  padding: 4px;
+}
+.roomLinks {
+  color: white;
+}
+.roomLinks:hover{
+  color: black;
+  text-decoration: none;
+}
+.roomLinksactive{
+  color: black;
+  text-decoration: none;
+}
+.roomLinksactive:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.sendMessageBox {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(65, 156, 63);
+  border-radius: 4px;
+}
+.sendMessageBox:focus {
+  border: 3px solid #555;
+}
+
+.newRoomBox {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid rgb(65, 156, 63);
+  border-radius: 4px;
+}
+
+.newRoomBox:focus {
+  border: 3px solid #555;
+}
+
+.new-room button {
+  background-color: rgb(65, 156, 63);
+  color: white;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.deleteButton {
+  width: 50%;
+}
+
+.message {
+  background-color: rgb(199, 208, 211);
+  border: 1px solid rgb(169, 174, 179);
+  border-radius: 25px;
+  width: 60%;
+  text-align: right;
+  padding: 10px;
+  font-family: verdana;
+  margin-left: 50px;
+  position: relative;
+  right: -30%;
+}
+.messageactive {
+  background-color: deepskyblue;
+  border: 1px solid dodgerblue;
+  border-radius: 25px;
+  width: 60%;
+  text-align: left;
+  padding: 10px;
+  font-family: verdana;
+  margin-left: 20px;
+}
+
+.messageID{
+  color: black;
+  text-align: right;
+}
+.messageIDactive {
+  text-align: left;
+}
+
+.messageTime {
+  text-align: center;
+}
+
+/******************************************************************** Live Stream Page Style ********************************************************************/
+
+
+/******************************************************************** Syllabus Page Style ********************************************************************/
+.syllabusImage img{
+  width: 100%;
+  height: auto;
+}
+
+.syllabusInfoBox {
+  background-color: lightBlue;
+  text-align: center;
+  padding: 5px;
+}
+
+/******************************************************************** Video Page Style ********************************************************************/
+
+
+
+/******************************************************************** Footer Style ********************************************************************/
+footer {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+}
+
+.footer img {
+  width: 50px;
+  height: auto;
+  margin: 5px;
+  
+}
+.footer p {
+  font-family: verdana;
+}
+/******************************************************************** Sign In Button Styles ********************************************************************/
+.g-signin2 {
+  float:right;
+  padding: 55px 0px;
+  position: fixed;
+  right: 15px;
+  z-index: 3;
+  top: 15px;
+}
+
+.logoutInfo {
+  position: absolute;
+  width: 15%;
+  top: 100px;
+  right: 10px;
+}
+.loginLabel {
+  background-color: rgb(93, 184, 91);
+  border: 1px solid rgb(65, 156, 63);
+  border-radius: 5px;
+  width: 50%;
+  color: white;
+  padding: 2px;
+}
+
+.img-circle {
+  float: right;
+  position: relative;
+  top: -80px;
+}
+
+.btn-success {
+  float: right;
+}
+
+
+/*************************************************************************************************************************************************************/
+/******************************************************************** Adjustment to Scale ********************************************************************/
+/*************************************************************************************************************************************************************/
+@media screen and (max-width: 1020px) {
+  .topnav a {
+    float: none;
+  }
+  .header {
+    position: relative;
+  }
+  .topnav {
+    position: relative;
+    top: -60px;
+  }
+  .column {
+    margin-top: 0px;
+    margin-bottom: 300px;
+  }
+  .column.side {
+    width: 95%;
+  }
+  .column.middle {
+    width: 95%;
+    margin-top: -250px;
+  }
+  .g-signin2 {
+    position: relative;
+    top: -335px;
+    right: 10px
+  }
+  .logoutInfo {
+    position: absolute;
+    width: 95%;
+    top: 350px;
+    right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .leftcolumn {
+    margin-top: 180px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 200px;
+  }
+  .rightcolumn {
+    margin-top: -200px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+}
