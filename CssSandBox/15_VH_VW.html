@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vh & Vw Unitts </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        header {
+            background: #333 url(https://source.unsplash.com/daily) no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            /* same as vh for vertical slices */
+            /* width: 50vw; */
+            text-align: center;
+            padding: 2rem;
+            padding-top: 7.5rem;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+        }
+        
+        header p {
+            margin: 1rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: #f4f4f4;
+            color: #333;
+            padding: 0.75rem 2rem;
+        }
+        
+        @media(max-height: 450px) {
+            header {
+                padding-top: 5rem;
+            }
+        }
+        
+        .strokeeme {
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="strokeeme">
+            <h1>Welcome to Out Website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fuga incidunt sit, velit vero libero.</p>
+
+        </div>
+        <a href="" class="btn">Find Out More</a>
+    </header>
+    <Section>
+        <h3>About Us </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nostrum dolores distinctio! Ut provident nisi quas sequi animi similique dicta expedita voluptatum porro quo. Adipisci exercitationem sapiente nulla consequuntur iure?</p>
+
+    </Section>
+
+</body>
+
+</html>
